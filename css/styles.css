@@ -54,7 +54,7 @@ li {
 }
 
 /* Шапка */
-.main-nav {
+.container__flex {
   display: flex;
   align-items: center;
 }
@@ -73,7 +73,7 @@ li {
   text-decoration: none;
 }
 
-.logo-web {
+.logo__title {
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -81,7 +81,7 @@ li {
   line-height: 1.19;
 }
 
-.logo .top {
+.logo .logo__title-header {
   color: #000000;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -97,20 +97,21 @@ li {
   line-height: 1.19;
 }
 
-.site-nav {
+/* Навігація на інші сторінки */
+.nav__list {
   display: flex;
   margin-left: 93px;
 }
 
-.site-nav .item-nav {
+.nav__list .item-nav {
   margin-right: 50px;
 }
 
-.site-nav .item-nav:last-child {
+.nav__list .item-nav:last-child {
   margin-right: 0;
 }
 
-.site-nav .link {
+.nav__list .link {
   display: block;
   padding: 32px 0;
   font-weight: 500;
@@ -122,17 +123,17 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__list .link:hover,
+.nav__list .link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.nav__list .link.current {
   color: var(--accent-color);
   position: relative;
 }
 
-.site-nav .link.current::after {
+.nav__list .link.current::after {
   content: '';
   position: absolute;
   width: 100%;
