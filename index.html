@@ -16,6 +16,103 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- Модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="modal__button">
+          <svg class="modal__icon" width="30" height="30">
+            <use href="./images/svg/symbol-defs.svg#icon-close" />
+          </svg>
+        </button>
+        <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+
+        <form class="form">
+          <div class="form__group">
+            <label class="form__label"
+              >Ім'я
+              <input
+                class="form__input"
+                type="text"
+                placeholder=" "
+                name=" user-nane"
+                required
+              />
+              <svg class="modal__icon" width="20" height="20">
+                <use
+                  href="./images/svg/symbol-defs.svg#icon-person-black-18dp-1"
+                />
+              </svg>
+            </label>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label"
+              >Телефон
+              <input
+                class="form__input"
+                type="tel"
+                placeholder=" "
+                name=" namber "
+                required
+              />
+              <svg class="modal__icon" width="20" height="20">
+                <use
+                  href="./images/svg/symbol-defs.svg#icon-phone-black-18dp-1"
+                />
+              </svg>
+            </label>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label"
+              >Пошта
+              <input
+                class="form__input"
+                type="email"
+                placeholder=" "
+                name=" tel-nane"
+                required
+              />
+              <svg class="modal__icon" width="20" height="20">
+                <use
+                  href="./images/svg/symbol-defs.svg#icon-email-black-18dp-1"
+                />
+              </svg>
+            </label>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label form__label-message"
+              >Коментар
+              <textarea
+                class="form__input"
+                name="form-text"
+                placeholder="Введіть текст"
+                required
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="form__check">
+            <input
+              class="form__checkbox display"
+              type="checkbox"
+              name=""
+              id="licence"
+              required
+            />
+            <label class="form__label-check" for="licence">
+              <svg class="form__check-icon" width="11" height="8">
+                <use href="./images/svg/symbol-defs.svg#icon-check" />
+              </svg>
+              Погоджуюся з розсилкою та приймаю
+              <a class="form__check-link" href="#"> Умови договору</a>
+            </label>
+            <button class="form__button" type="submit">Відправити</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- Шапка -->
     <header class="header">
       <div class="container flex">
@@ -58,226 +155,119 @@
       </div>
     </header>
     <!-- Унікальний контент сторінки -->
-    <main>
+    <main class="main">
       <!-- Герой-->
-      <section class="hero section-hero">
-        <div class="center">
-          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button data-modal-open class="button center" type="button">
-            Замовити послугу
-          </button>
-        </div>
-
-        <!-- Модальне вікно -->
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <button data-modal-close class="button-close">
-              <svg class="close" width="30" height="30">
-                <use href="./images/svg/symbol-defs.svg#icon-close" />
-              </svg>
-            </button>
-            <h2 class="title-modal">Залиште свої дані, ми вам передзвонимо</h2>
-            <form class="form">
-              <div class="form__group">
-                <label class="form-label"
-                  >Ім'я
-                  <input
-                    class="form-input"
-                    type="text"
-                    placeholder=" "
-                    name=" user-nane"
-                    required
-                  />
-                  <svg class="modal-icon" width="20" height="20">
-                    <use
-                      href="./images/svg/symbol-defs.svg#icon-person-black-18dp-1"
-                    />
-                  </svg>
-                </label>
-              </div>
-
-              <div class="form__group">
-                <label class="form-label"
-                  >Телефон
-                  <input
-                    class="form-input"
-                    type="tel"
-                    placeholder=" "
-                    name=" namber "
-                    required
-                  />
-                  <svg class="modal-icon" width="20" height="20">
-                    <use
-                      href="./images/svg/symbol-defs.svg#icon-phone-black-18dp-1"
-                    />
-                  </svg>
-                </label>
-              </div>
-
-              <div class="form__group">
-                <label class="form-label"
-                  >Пошта
-                  <input
-                    class="form-input"
-                    type="email"
-                    placeholder=" "
-                    name=" tel-nane"
-                    required
-                  />
-                  <svg class="modal-icon" width="20" height="20">
-                    <use
-                      href="./images/svg/symbol-defs.svg#icon-email-black-18dp-1"
-                    />
-                  </svg>
-                </label>
-              </div>
-
-              <div class="form__group">
-                <label class="form-label label-message"
-                  >Коментар
-                  <textarea
-                    class="form-input"
-                    name="form-text"
-                    placeholder="Введіть текст"
-                    required
-                  ></textarea>
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="display form-checkbox"
-                  type="checkbox"
-                  name=""
-                  id="licence"
-                  required
-                />
-                <label class="check-name" for="licence">
-                  <svg class="check-svg" width="11" height="8">
-                    <use href="./images/svg/symbol-defs.svg#icon-check" />
-                  </svg>
-                  Погоджуюся з розсилкою та приймаю
-                  <a class="check-link" href="#"> Умови договору</a>
-                </label>
-                <button class="button-modal" type="submit">Відправити</button>
-              </div>
-            </form>
-          </div>
-        </div>
+      <section class="hero">
+        <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+        <button data-modal-open class="hero__button" type="button">
+          Замовити послугу
+        </button>
       </section>
       <!-- Особливості-->
-      <section class="section section-top">
+      <section class="features section">
         <div class="container">
           <h2 class="visually-hidden">Особливості</h2>
-          <ul class="list decorate-features">
-            <li class="item">
-              <div class="svg-list">
-                <svg class="social-icon" width="70" height="70">
+          <ul class="features__list list">
+            <li class="features__item">
+              <div class="features__box">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/svg/symbol-defs.svg#icon-antenna" />
                 </svg>
               </div>
-              <h3 class="section-title">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="text">
-                Идейные соображения, а также начало повседневной работы по
-                формированию позиции.
+              <h3 class="features__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p class="features__text">
+                Ідейні міркування, і навіть початок повсякденної роботи з
+                формування позиції.
               </p>
             </li>
-            <li class="item">
-              <div class="svg-list">
-                <svg class="social-icon" width="70" height="70">
+            <li class="features__item">
+              <div class="features__box">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/svg/symbol-defs.svg#icon-clock" />
                 </svg>
               </div>
-              <h3 class="section-title">ПУНКТУАЛЬНІСТЬ</h3>
-              <p class="text">
-                Задача организации, в особенности же рамки и место обучения
-                кадров влечет за собой.
+              <h3 class="features__title">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="features__text">
+                Завдання організації, особливо рамки і місце навчання кадрів
+                тягне у себе.
               </p>
             </li>
-            <li class="item">
-              <div class="svg-list">
-                <svg class="social-icon" width="70" height="70">
+            <li class="features__item">
+              <div class="features__box">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/svg/symbol-defs.svg#icon-diagram" />
                 </svg>
               </div>
               <h3 class="section-title">ПЛАНУВАННЯ</h3>
-              <p class="text">
-                Равным образом консультация с широким активом в значительной
-                степени обуславливает.
+              <p class="features__text">
+                Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li class="item">
-              <div class="svg-list">
-                <svg class="social-icon" width="70" height="70">
+            <li class="features__item">
+              <div class="features__box">
+                <svg class="features__icon" width="70" height="70">
                   <use href="./images/svg/symbol-defs.svg#icon-astronaut" />
                 </svg>
               </div>
-              <h3 class="section-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p class="text">
-                Значимость этих проблем настолько очевидна, что реализация
-                плановых заданий.
+              <h3 class="features__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="features__text">
+                Значимість цих проблем настільки очевидна, що реалізація
+                планових завдань.
               </p>
             </li>
           </ul>
         </div>
       </section>
       <!-- Чим ми займаємся -->
-      <section class="section padding-top-0">
+      <section class="we-do section">
         <div class="container">
-          <h2 class="section-title-big">Чим ми займаємося</h2>
-          <ul class="list we-do-decorate">
-            <li class="item">
-              <div class="container-pictur">
-                <img
-                  class="pictures"
-                  class="title-pictures"
-                  src="./images/main-page/box1.jpg "
-                  width="370"
-                  alt="box 1"
-                />
-                <p class="title-pictures">Десктопні додатки</p>
-              </div>
+          <h2 class="title">Чим ми займаємося</h2>
+          <ul class="we-do__list list">
+            <li class="we-do__item">
+              <img
+                class="pictures"
+                src="./images/main-page/box1.jpg "
+                width="370"
+                alt="box 1"
+              />
+              <p class="we-do__text">Десктопні додатки</p>
             </li>
-            <li class="item">
-              <div class="container-pictur">
-                <img
-                  class="pictures"
-                  src="./images/main-page/box2.jpg"
-                  width="370"
-                  alt="box 2"
-                />
-                <p class="title-pictures">Мобільні додатки</p>
-              </div>
+            <li class="we-do__item">
+              <img
+                class="pictures"
+                src="./images/main-page/box2.jpg"
+                width="370"
+                alt="box 2"
+              />
+              <p class="we-do__text">Мобільні додатки</p>
             </li>
-            <li class="item">
-              <div class="container-pictur">
-                <img
-                  class="pictures"
-                  src="./images/main-page/box3.jpg"
-                  width="370"
-                  alt="box 3"
-                />
-                <p class="title-pictures">Дизайнерські рішення</p>
-              </div>
+            <li class="we-do__item">
+              <img
+                class="pictures"
+                src="./images/main-page/box3.jpg"
+                width="370"
+                alt="box 3"
+              />
+              <p class="we-do__text">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
       </section>
       <!-- Наша команда -->
-      <section class="section section-top bgc-team">
+      <section class="team section">
         <div class="container">
-          <h2 class="section-title-big">Наша команда</h2>
-          <ul class="list decorate-team">
-            <li class="item bgc-teem">
+          <h2 class="title">Наша команда</h2>
+          <ul class="team__list list">
+            <li class="team__item">
               <img
                 class="pictures"
                 src="./images/main-page/img.jpg"
                 width="270"
                 alt="Ігор Дем'яненко"
               />
-              <div class="item-person">
-                <h3 class="title-name">Ігор Дем'яненко</h3>
-                <p class="name-text">Product Designer</p>
+              <div class="person">
+                <h3 class="person__title">Ігор Дем'яненко</h3>
+                <p class="person__text">Product Designer</p>
                 <ul class="socials-items">
                   <li class="sosial-list">
                     <a class="sosial-link" href="">
@@ -318,16 +308,16 @@
                 </ul>
               </div>
             </li>
-            <li class="item bgc-teem">
+            <li class="team__item">
               <img
                 class="pictures"
                 src="./images/main-page/img(1).jpg"
                 width="270"
                 alt="Ольга Рєпіна"
               />
-              <div class="item-person">
-                <h3 class="title-name">Ольга Рєпіна</h3>
-                <p class="name-text">Frontend Developer</p>
+              <div class="person">
+                <h3 class="person__title">Ольга Рєпіна</h3>
+                <p class="person__text">Frontend Developer</p>
                 <ul class="socials-items">
                   <li class="sosial-list">
                     <a class="sosial-link" href="">
@@ -368,16 +358,16 @@
                 </ul>
               </div>
             </li>
-            <li class="item bgc-teem">
+            <li class="team__item">
               <img
                 class="pictures"
                 src="./images/main-page/img(2).jpg"
                 width="270"
                 alt="Микола Тарасов"
               />
-              <div class="item-person">
-                <h3 class="title-name">Микола Тарасов</h3>
-                <p class="name-text">Marketing</p>
+              <div class="person">
+                <h3 class="person__title">Микола Тарасов</h3>
+                <p class="person__text">Marketing</p>
                 <ul class="socials-items">
                   <li class="sosial-list">
                     <a class="sosial-link" href="">
@@ -418,16 +408,16 @@
                 </ul>
               </div>
             </li>
-            <li class="item bgc-teem">
+            <li class="team__item">
               <img
                 class="pictures"
                 src="./images/main-page/img(3).jpg"
                 width="270"
                 alt="Михайло Єрмаков"
               />
-              <div class="item-person">
-                <h3 class="title-name">Михайло Єрмаков</h3>
-                <p class="name-text">UI Designer</p>
+              <div class="person">
+                <h3 class="person__title">Михайло Єрмаков</h3>
+                <p class="person__text">UI Designer</p>
                 <ul class="socials-items">
                   <li class="sosial-list">
                     <a class="sosial-link" href="">
@@ -473,7 +463,7 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="section-title-big">Постійні клієнти</h2>
+          <h2 class="title">Постійні клієнти</h2>
           <ul class="list customers-list">
             <li class="customer-li">
               <a class="customer-link" href="">
