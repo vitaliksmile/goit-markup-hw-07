@@ -666,60 +666,11 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footter-email {
-  display: block;
-  margin-left: 93px;
-}
-
-.title-email {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.footer-inpur {
-  width: 358px;
-  height: 50px;
-  background: #2f303a;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  margin-right: 12px;
-  padding: 15px 16px;
-  color: var(--primary--white-color);
-}
-.footer-inpur::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footter-email-btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  padding: 10px 28px;
-  border: transparent;
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-.telegram-svg {
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-.footer-contacts {
+/* Підвал сторінки соціалтні мережі */
+.contacts {
   margin-left: 70px;
 }
-.footer-title {
+.contacts__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -727,12 +678,12 @@ li {
   color: var(--primary--white-color);
   margin-bottom: 20px;
 }
-.socials-items-footer {
+.contacts__list {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-.sosial-list-footer {
+.contacts__item {
   display: flex;
   border-radius: 50%;
   width: 44px;
@@ -740,7 +691,7 @@ li {
   justify-content: center;
   align-items: center;
 }
-.sosial-footer-link {
+.contacts__link {
   display: flex;
   border-radius: 50%;
   width: 44px;
@@ -753,17 +704,69 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sosial-footer-link:hover,
-.sosial-footer-link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   background: var(--accent-color);
 }
 
-.svg-footer {
+.contacts__link {
   fill: var(--primary--white-color);
 }
 
-.socials-items-footer .sosial-list-footer:not(:last-child) {
+.contacts__list .contacts__item:not(:last-child) {
   margin-right: 10px;
+}
+
+/* Підвал оформлення розсилка */
+
+.mailing-list {
+  display: block;
+  margin-left: 93px;
+}
+
+.mailing-list__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.mailing-list__input {
+  width: 358px;
+  height: 50px;
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  padding: 15px 16px;
+  color: var(--primary--white-color);
+}
+.mailing-list__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mailing-list__btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  padding: 10px 28px;
+  border: transparent;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.mailing-list__icon {
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 /* ________________________________________ */
