@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- Шапка -->
-    <header class="header">
+    <header class="header header__line">
       <div class="container flex">
         <a class="logo__link link" href="index.html">
           <span class="logo__title">Web</span
@@ -60,41 +60,41 @@
       </div>
     </header>
     <!-- Унікальний контент сторінки -->
-    <main>
+    <main class="portfolio">
       <section class="projects section">
         <div class="container">
           <h1 class="visually-hidden">Портфоліо</h1>
           <!-- Фільтр -->
           <ul class="filter list">
-            <li class="item">
-              <button class="filter-button" type="button">Усі</button>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Усі</button>
             </li>
-            <li class="item">
-              <button class="filter-button" type="button">Веб-сайти</button>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Веб-сайти</button>
             </li>
-            <li class="item">
-              <button class="filter-button" type="button">Додатки</button>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Додатки</button>
             </li>
-            <li class="item">
-              <button class="filter-button" type="button">Дизайн</button>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Дизайн</button>
             </li>
-            <li class="item">
-              <button class="filter-button" type="button">Маркетинг</button>
+            <li class="filter__item">
+              <button class="filter__button" type="button">Маркетинг</button>
             </li>
           </ul>
           <!-- Проекти -->
           <ul class="projects list">
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project1.jpg"
                     width="370"
                     alt="project1"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -103,22 +103,22 @@
                   </div>
                 </div>
               </a>
-              <div class="project-container">
-                <h2 class="projects-title">Технокряк</h2>
-                <p class="text">Веб-сайт</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Технокряк</h2>
+                <p class="projects__text">Веб-сайт</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project2.jpg"
                     width="370"
                     alt="project2"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -128,22 +128,24 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Постер New Orlean vs Golden Star</h2>
-                <p class="text">Дизайн</p>
+              <div class="projects__container">
+                <h2 class="projects__title">
+                  Постер New Orlean vs Golden Star
+                </h2>
+                <p class="projects__text">Дизайн</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project3.jpg"
                     width="370"
                     alt="project3"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -153,22 +155,22 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Ресторан Seafood</h2>
-                <p class="text">Додаток</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Ресторан Seafood</h2>
+                <p class="projects__text">Додаток</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project4.jpg"
                     width="370"
                     alt="project4"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -178,22 +180,22 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Проєкт Prime</h2>
-                <p class="text">Маркетинг</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Проєкт Prime</h2>
+                <p class="projects__text">Маркетинг</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project5.jpg"
                     width="370"
                     alt="project5"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -203,22 +205,22 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Проєкт Boxes</h2>
-                <p class="text">Додаток</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Проєкт Boxes</h2>
+                <p class="projects__text">Додаток</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project6.jpg"
                     width="370"
                     alt="project6"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -228,22 +230,22 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Inspiration has no Borders</h2>
-                <p class="text">Веб-сайт</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Inspiration has no Borders</h2>
+                <p class="projects__text">Веб-сайт</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project7.jpg"
                     width="370"
                     alt="project7"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -253,22 +255,22 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Видання Limited Edition</h2>
-                <p class="text">Дизайн</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Видання Limited Edition</h2>
+                <p class="projects__text">Дизайн</p>
               </div>
             </li>
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project8.jpg"
                     width="370"
                     alt="project8"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -278,23 +280,23 @@
                 </div>
               </a>
 
-              <div class="project-container">
-                <h2 class="projects-title">Проект LAB</h2>
-                <p class="text">Маркетинг</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Проект LAB</h2>
+                <p class="projects__text">Маркетинг</p>
               </div>
             </li>
 
-            <li class="item-projects">
-              <a class="overlay-link" href="#">
-                <div class="project-overlay">
+            <li class="projects__item">
+              <a class="projects__link" href="#">
+                <div class="project__box">
                   <img
                     class="pictures"
                     src="./images/portfolio/project9.jpg"
                     width="370"
                     alt="project9"
                   />
-                  <div class="overlay-thumb">
-                    <p class="title-overlay">
+                  <div class="overlay">
+                    <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
                       отримати вичерпні відомості про компанію чи приватну
@@ -303,9 +305,9 @@
                   </div>
                 </div>
               </a>
-              <div class="project-container">
-                <h2 class="projects-title">Growing Business</h2>
-                <p class="text">Додаток</p>
+              <div class="projects__container">
+                <h2 class="projects__title">Growing Business</h2>
+                <p class="projects__text">Додаток</p>
               </div>
             </li>
           </ul>
