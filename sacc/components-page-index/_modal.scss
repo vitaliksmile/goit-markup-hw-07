@@ -45,15 +45,19 @@
   border: none;
   padding: 0;
   margin: 0;
+
+  &:hover .modal__icon {
+    fill: var(--accent-color);
+  }
 }
 
 .modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
   stroke: rgba(0, 0, 0, 0.1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal__button:hover .modal__icon {
-  fill: var(--accent-color);
 }
 
 .modal__title {
@@ -67,28 +71,21 @@
   width: 448px;
   height: 101%;
   margin-top: 12px;
-}
-.form__group {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 10px;
-}
-.form__label {
-  position: relative;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  color: #757575;
-}
 
-.modal__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &__group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__label {
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: #757575;
+  }
 }
 
 .form__input {
@@ -104,17 +101,17 @@
   transition-property: outline;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form__input:focus {
-  outline: 1px solid var(--accent-color);
-}
 
-.form__input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .form__label-message .form__input {
@@ -192,7 +189,6 @@
   height: 16px;
   margin-right: 8px;
   border: 2px solid black;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

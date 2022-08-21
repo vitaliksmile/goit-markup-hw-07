@@ -30,8 +30,9 @@
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition();
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .address__linki {
@@ -39,8 +40,9 @@
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition();
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__link.link:hover,
 .address__link.link:focus,

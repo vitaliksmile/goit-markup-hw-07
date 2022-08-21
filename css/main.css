@@ -115,15 +115,17 @@ body {
   padding: 0;
   margin: 0;
 }
+.modal__button:hover .modal__icon {
+  fill: var(--accent-color);
+}
 
 .modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
   stroke: rgba(0, 0, 0, 0.1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__button:hover .modal__icon {
-  fill: var(--accent-color);
 }
 
 .modal__title {
@@ -139,14 +141,12 @@ body {
   height: 101%;
   margin-top: 12px;
 }
-
 .form__group {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 10px;
 }
-
 .form__label {
   position: relative;
   font-weight: 400;
@@ -154,14 +154,6 @@ body {
   line-height: 1.1;
   letter-spacing: 0.01em;
   color: #757575;
-}
-
-.modal__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__input {
@@ -178,11 +170,9 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .form__input:focus {
   outline: 1px solid var(--accent-color);
 }
-
 .form__input::-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -190,7 +180,6 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -198,7 +187,6 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form__input::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -288,7 +276,6 @@ body {
   height: 16px;
   margin-right: 8px;
   border: 2px solid black;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -330,15 +317,12 @@ body {
   display: flex;
   margin-left: 93px;
 }
-
 .nav__list .nav__item {
   margin-right: 50px;
 }
-
 .nav__list .nav__item:last-child {
   margin-right: 0;
 }
-
 .nav__list .link {
   display: block;
   padding: 32px 0;
@@ -376,11 +360,9 @@ body {
   display: flex;
   margin-left: auto;
 }
-
 .contact .contact__item + .contact__item {
   margin-left: 50px;
 }
-
 .contact .link {
   font-weight: 500;
   font-size: 14px;
@@ -408,7 +390,6 @@ body {
   padding-bottom: 200px;
   text-align: center;
 }
-
 .hero__title {
   color: var(--primary--white-color);
   font-weight: 900;
@@ -423,7 +404,6 @@ body {
   max-width: 696px;
   text-align: center;
 }
-
 .hero__button {
   padding: 10px 32px;
   cursor: pointer;
@@ -495,19 +475,12 @@ body {
 .we-do {
   padding-top: 0;
 }
-
 .we-do__list {
   display: flex;
 }
-
-.list .we-do__item + .we-do__item {
-  margin-left: 30px;
-}
-
 .we-do__item {
   position: relative;
 }
-
 .we-do__text {
   position: absolute;
   color: #ffffff;
@@ -525,11 +498,12 @@ body {
   padding: 27px 0;
 }
 
-/* Наша команда */
+.list .we-do__item + .we-do__item {
+  margin-left: 30px;
+} /* Наша команда */
 .team {
   background-color: #f5f4fa;
 }
-
 .team__list.list {
   display: flex;
 }
@@ -548,7 +522,6 @@ body {
 .person {
   padding: 30px 0;
 }
-
 .person__title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -568,7 +541,6 @@ body {
   justify-content: center;
   margin-top: 16px;
 }
-
 .social-networks__link {
   display: flex;
   justify-content: center;
@@ -578,12 +550,11 @@ body {
   width: 44px;
   height: 44px;
   outline: none;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social-networks__link:hover,
-.social-networks__link:focus {
+.social-networks__link:hover, .social-networks__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -617,24 +588,24 @@ body {
   border-radius: 4px;
   outline: none;
   transition-property: border-color;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.regular-customers__link:hover, .regular-customers__link:focus, .regular-customers__link:hover .regular-customers__icon, .regular-customers__link:focus .regular-customers__icon {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .regular-customers__icon {
   fill: #afb1b8;
   transition-property: fill;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.regular-customers__link:hover,
-.regular-customers__link:focus,
-.regular-customers__link:hover .regular-customers__icon,
-.regular-customers__link:focus .regular-customers__icon {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
-} /* Підвал сторінки footer з адрксою */
+/* Підвал сторінки footer з адрксою */
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -667,6 +638,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -676,6 +648,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -691,7 +664,6 @@ body {
 .contacts {
   margin-left: 70px;
 }
-
 .contacts__title {
   font-weight: 700;
   font-size: 14px;
@@ -700,13 +672,11 @@ body {
   color: var(--primary--white-color);
   margin-bottom: 20px;
 }
-
 .contacts__list {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-
 .contacts__item {
   display: flex;
   border-radius: 50%;
@@ -725,17 +695,13 @@ body {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   outline: none;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts__link:hover,
-.contacts__link:focus {
-  background: var(--accent-color);
-}
-
-.contacts__link {
   fill: var(--primary--white-color);
+}
+.contacts__link:hover, .contacts__link:focus {
+  background: var(--accent-color);
 }
 
 .contacts__list .contacts__item:not(:last-child) {
@@ -747,7 +713,6 @@ body {
   display: block;
   margin-left: 93px;
 }
-
 .mailing-list__title {
   font-weight: 700;
   font-size: 14px;
@@ -755,6 +720,22 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+}
+.mailing-list__btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  padding: 10px 28px;
+  border: transparent;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.mailing-list__icon {
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .mailing-list__input {
@@ -768,7 +749,6 @@ body {
   padding: 15px 16px;
   color: var(--primary--white-color);
 }
-
 .mailing-list__input::-moz-placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -776,7 +756,6 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .mailing-list__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -784,31 +763,12 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .mailing-list__input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.mailing-list__btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  padding: 10px 28px;
-  border: transparent;
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.mailing-list__icon {
-  vertical-align: middle;
-  margin-left: 10px;
 }
 
 /* ________________________________________ */
@@ -824,7 +784,6 @@ body {
   justify-content: center;
   margin-bottom: 50px;
 }
-
 .filter.list .filter__item + .filter__item {
   margin-left: 8px;
 }
@@ -844,9 +803,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filter__button:hover,
-.filter__button:focus {
+.filter__button:hover, .filter__button:focus {
   color: var(--primary--white-color);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -858,7 +815,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
 .projects.list .projects__item {
   width: 370 px;
   margin-right: 30px;
@@ -867,7 +823,6 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .projects.list .projects__item:hover {
   outline: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);

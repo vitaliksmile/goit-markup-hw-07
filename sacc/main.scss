@@ -14,8 +14,9 @@
 
 @import './utils/variables';
 @import './utils/reset';
-@import './utils/base';
+@import './utils/global';
 /* Оформлення модального блока */
+@import './utils/mixin';
 @import './components-page-index/modal';
 /* Шапка */
 @import './components-page-index/header';
